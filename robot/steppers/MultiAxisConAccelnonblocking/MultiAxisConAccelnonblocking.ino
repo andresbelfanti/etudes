@@ -54,13 +54,8 @@ BasicStepperDriver stepperY(MOTOR_STEPS, DIR_Y, STEP_Y, SLEEP);
 BasicStepperDriver stepperZ(MOTOR_STEPS, DIR_Z, STEP_Z, SLEEP);
 
 
-// Pick one of the two controllers below
-// each motor moves independently, trajectory is a hockey stick
-// MultiDriver controller(stepperX, stepperY);
-// OR
-// synchronized move, trajectory is a straight line
-SyncDriver controller(stepperX, stepperY, stepperZ);
 
+SyncDriver controller(stepperX, stepperY, stepperZ);
 bool motorFree = true;
 
 int a[3] = {360*2,360*4,360*8};
