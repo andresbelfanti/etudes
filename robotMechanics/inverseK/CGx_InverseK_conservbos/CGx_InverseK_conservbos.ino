@@ -7,7 +7,7 @@ Servo myservoF;  // create servo object to control a servo
 
 float a0, a1, a2, a3;
 
-int x = 51;
+int x = 51; // posicion inicial
 int y= 0;
 int z = 50;
 
