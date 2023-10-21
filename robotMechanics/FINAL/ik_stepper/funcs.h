@@ -61,7 +61,7 @@ void moveToAngle(double b, double a1, double a2) {  // mueve los steppers
 
 
    double girosA[3] = { 0, 0, 0 }; // almacena a0, a1, a2 
-    girosA = anglesRead(); 
+   girosA = anglesRead(); 
 
     double diffb =  (b - girosA[0]) * 3.75; // diferencia "ratio de la polea"
     double diffa1 = (a1 - girosA[1])*3.75;
@@ -109,21 +109,21 @@ sensors_event_t gyro1;
   mpu_gyro1->getEvent(&gyro1);
 
   // deberia leer 2 giroscopios
-angles[0] = gyro0.gyro.x; // cambiar a grados -- observar que data entrega
-angles[1] = gyro1.gyro.x;
+angles[0] = gyro0.gyro.x* RAD_TO_DEG; // cambiar a grados -- observar que data entrega
+angles[1] = gyro1.gyro.x* RAD_TO_DEG;
 
 
- /
-  Serial.print("\t\tGyro X: "); // cambiar a grados
-  Serial.print(gyro.gyro.x);
-  Serial.print(" \tY: ");
-  Serial.print(gyro.gyro.y);
-  Serial.print(" \tZ: ");
-  Serial.print(gyro.gyro.z);
-  Serial.println(" radians/s ");
+ 
+ Serial.println("posición sensada: ")
+  Serial.print("a1: "); // cambiar a grados
+  Serial.print(angles[0]);
+  Serial.print("a2: "); // cambiar a grados
+  Serial.print(angles[1].x);
   Serial.println();
 
   // ademas lectura de base - Encoder Optico?? // angles[2]
+
+  return angles;
 
 }
 

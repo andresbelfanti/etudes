@@ -32,32 +32,32 @@ bool motorFree = true;
 
 //==================SEtUP =========================
 void setup() {
+ Serial.begin(9600);
 
  stepperInit();
-
-  Serial.begin(9600);
-
-  mpuTest();
+ mpuTest();
 
   Serial.println("<pocho is ready>");
-  delay(2000);
+    delay(2000);
 }
 //==============LOOP==============================
 
 void loop() {
   receiver(); // devuelve a coordes[x,y,z] // activa motorFree = true
 
- if(motorFree == true){
- moveToAngle(moveToPos(coordes[0], coordes[1], coordes[2]));
-   motorFree = false;
- }
-
-  unsigned wait_time_micros = controller.nextAction(); // motor control loop 
-
-  if (wait_time_micros <= 0) {
-    Serial.println("motorEnd");
-    motorFree = true;
+  if(motorFree == true){
+      moveToAngle(moveToPos(coordes[0], coordes[1], coordes[2]));
+      motorFree = false;
   }
+
+    unsigned wait_time_micros = controller.nextAction(); // motor control loop 
+
+    if (wait_time_micros <= 0) {
+        Serial.println("motorEnd");
+      
+        anglesRead();
+    }
+
 
 
    
