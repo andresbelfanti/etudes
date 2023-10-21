@@ -20,10 +20,6 @@ const byte numChars = 32;
 char receivedChars[numChars];  // an array to store the received data
 int coordes[3] = { 0, 0, 0 };
 
-
-
-
-long oldPosition = 0;
 //====================
 int angleToMicroseconds(double angle) {
   double val = 460.0 + (((2400.0 - 460.0) / 180.0) * angle);
@@ -46,18 +42,12 @@ void moveToAngle(double b, double a1, double a2) {
 
 void moveToPos(double x, double y, double z) {
   double b = atan2(y, x) * (180 / 3.1415);  // base angle
-
   double l = sqrt(x * x + y * y);  // x and y extension
-
   double h = sqrt(l * l + z * z);
-
   double phi = atan(z / l) * (180 / 3.1415);
-
   double theta = acos((h / 2) / 75) * (180 / 3.1415);
-
   double a1 = phi + theta;  // angle for first part of the arm
   double a2 = phi - theta;  // angle for second part of the arm
-
   moveToAngle(b, a1, a2);
 }
 //===========================================================
@@ -78,7 +68,7 @@ void loop() {
   receiver();
 
   moveToPos(coordes[0], coordes[1], coordes[2]);
-    //delay(2000);
+   
 }
 //==========================================
 void receiver() {
