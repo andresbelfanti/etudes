@@ -54,8 +54,8 @@ void loop() {
 
     if (wait_time_micros <= 0) {
         Serial.println("motorEnd");
-      
         anglesRead();
+        motorFree = true;
     }
 
 

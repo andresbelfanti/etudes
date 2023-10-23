@@ -1,5 +1,5 @@
 let l1,l2,l3; //limb object declaration
-let l1_len = 100 , l2_len = 70;
+let l1_len = 85 , l2_len = 84;
 let a = 0 , b = 0;
 let faux_origin; // faux origin for computations
 let path = []; //2x3 array that contains 3 points on a path
@@ -7,7 +7,7 @@ let path = []; //2x3 array that contains 3 points on a path
 
 
 function setup() {
-  createCanvas(450, 450);
+  createCanvas(600, 600);
   
   //set angle mode
   angleMode(DEGREES);
@@ -19,8 +19,8 @@ function setup() {
   faux_origin = createVector(l1.x,l1.y);
   
   //set path queue
-  path.push(createVector(0,0));  //start at home
-  path.push(createVector(130,00)); //desired end point
+  path.push(createVector(0,0));  //start at homepoint
+  path.push(createVector(-0,20)); //desired end 
   
    
 }
