@@ -3,6 +3,22 @@
 //Ensable/Disable
 #define SLEEP 8
 
+// -- variables------------------------
+double x = 0;
+double y = 0;
+double z = 0;
+const byte numChars = 32;
+char receivedChars[numChars];  // an array to store the received data
+int coordes[3] = { 1, 1, 1 };
+double angleSensor[3] = {0,0,0};
+static double angulos[3] = {0,0,0};
+
+bool motorFree = true; 
+bool stopAll = false;
+//==================================
+Adafruit_VL53L0X lox = Adafruit_VL53L0X();
+
+//=============================
 // Motor steps per revolution. Most steppers are 200 steps or 1.8 degrees/step
 #define MOTOR_STEPS 200
 // Target RPM for X axis motor
@@ -36,4 +52,3 @@ BasicStepperDriver stepperX(MOTOR_STEPS, DIR_X, STEP_X, SLEEP); // chequear si e
 BasicStepperDriver stepperY(MOTOR_STEPS, DIR_Y, STEP_Y, SLEEP);
 BasicStepperDriver stepperZ(MOTOR_STEPS, DIR_Z, STEP_Z, SLEEP);
 SyncDriver controller(stepperX, stepperY, stepperZ);
-bool motorFree = true;

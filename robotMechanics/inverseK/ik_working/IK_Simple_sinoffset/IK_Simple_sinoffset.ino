@@ -28,21 +28,20 @@ int angleToMicroseconds(double angle) {
 //=================================================
 void moveToAngle(double b, double a1, double a2) {
   Serial.print(b);
-  Serial.print(" -");
+  Serial.print(" ");
   Serial.print(a1);
-  Serial.print(" -");
+  Serial.print(" ");
   Serial.print(a2);
-  Serial.println(" -");
-  
-  arm1servo.writeMicroseconds(angleToMicroseconds(55-a1));
-  arm2servo.writeMicroseconds(angleToMicroseconds(a2+100 ));
-  baseservo.writeMicroseconds(angleToMicroseconds(b+105));
+  Serial.println(" ");
+  baseservo.writeMicroseconds(angleToMicroseconds(b + 100));
+  arm1servo.writeMicroseconds(angleToMicroseconds(135 - a1));
+  arm2servo.writeMicroseconds(angleToMicroseconds(a2 + 110));
 }
 //======================================================
 
 void moveToPos(double x, double y, double z) {
   double b = atan2(y, x) * (180 / 3.1415);  // base angle
-  double l = sqrt(x * x + y * y);  // x and y extension
+  double l = sqrt(x * x + y * y);           // x and y extension
   double h = sqrt(l * l + z * z);
   double phi = atan(z / l) * (180 / 3.1415);
   double theta = acos((h / 2) / 75) * (180 / 3.1415);
@@ -68,7 +67,6 @@ void loop() {
   receiver();
 
   moveToPos(coordes[0], coordes[1], coordes[2]);
-   
 }
 //==========================================
 void receiver() {
