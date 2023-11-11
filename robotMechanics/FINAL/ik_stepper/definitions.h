@@ -44,7 +44,7 @@ Adafruit_VL53L0X lox = Adafruit_VL53L0X();
 #define STEP_Z 4
 
 // 1=full step, 2=half step etc.
-#define MICROSTEPS 1
+#define MICROSTEPS 16
 
 // 2-wire basic config, microstepping is hardwired on the driver
 // Other drivers can be mixed and matched but must be configured individually

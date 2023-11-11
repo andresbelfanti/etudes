@@ -39,25 +39,28 @@ void setup() {
 
 void loop() {
 
-  if(receiver()==true){
+  receiver();
     //anglesRead();
-    ikSolver(coordes[0], coordes[1], coordes[2]);
-    moveToAngle(angulos[0], angulos[1], angulos[2]);
-  }
+    //ikSolver(coordes[0], coordes[1], coordes[2]);
+    moveToAngle(coordes[0], coordes[1], coordes[2]);
+    coordes[0] = 0;
+    coordes[1] = 0;
+    coordes[2] = 0;
+
    
   //lidarRead();
  
-  if(stopAll == true){
-    Serial.println("STOP!!");
-    break; // si se da la orden de parar llega hasta acá?
-  }
+  // if(stopAll == true){
+  //   Serial.println("STOP!!");
+  //   //break; // si se da la orden de parar llega hasta acá?
+  // }
 
     unsigned wait_time_micros = controller.nextAction();  // motor control loop
  
   if (wait_time_micros <= 0) {
     Serial.println("motorEnd");
     //anglesRead();
-    moveToAngle(angulos[0], angulos[1], angulos[2]);
+    //moveToAngle(angulos[0], angulos[1], angulos[2]);
     }
 
 }

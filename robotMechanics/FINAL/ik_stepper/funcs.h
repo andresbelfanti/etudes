@@ -37,24 +37,7 @@ void lidarRead() {
     Serial.println(lox.readRange());
   }
 }
-//=======================================================
-void rest(){ // posición de descanso automatica independiente
-    moveToAngle(90,170,10); // posicion de descanso
 
-    while(1){ // funcion para mover lentamente 
-    
-      unsigned wait_time_micros = controller.nextAction();  // motor control loop
-      delay(1);  
-    
-      if (wait_time_micros <= 0) {
-       Serial.println("RESTING");
-        stepperX.disable();
-        stepperY.disable();
-        stepperZ.disable();
-        break;
-       }
-    }
-}
 
 //=========================================================
 void separador(char input[]) {  // separa el string en int's
@@ -67,7 +50,7 @@ void separador(char input[]) {  // separa el string en int's
     stopAll = true;
   }
   if(input == "REST"){ // CHEUQEAR SI FUNCIONA
-    rest();
+   // rest();
   }
 
   token = strtok(input, separator);
@@ -82,7 +65,7 @@ void separador(char input[]) {  // separa el string en int's
 }
 
 //==========================================
-void receiver() {  // recibe serial
+ bool receiver() {  // recibe serial
   static byte ndx = 0;
   char endMarker = '\n';
   char rc;
@@ -156,6 +139,24 @@ void ikSolver(double x, double y, double z) {  //>>>>>>>>>>>> IK SOLVER
   angulos[1] = a1;
   angulos[2] = a2;
 }
+//=======================================================
+void rest(){ // posición de descanso automatica independiente
+    moveToAngle(90,170,10); // posicion de descanso
+
+    while(1){ // funcion para mover lentamente 
+    
+      unsigned wait_time_micros = controller.nextAction();  // motor control loop
+      delay(1);  
+    
+      if (wait_time_micros <= 0) {
+       Serial.println("RESTING");
+        stepperX.disable();
+        stepperY.disable();
+        stepperZ.disable();
+        break;
+       }
+    }
+}
 //===========================================================
 
 
@@ -178,7 +179,6 @@ void mpuTest() {
 
   mpu_gyro0 = mpu0.getGyroSensor();
   mpu_gyro0->printSensorDetails();
-
 
   if (!mpu1.begin()) {
     Serial.println("Failed to find MPU6050 chip");
