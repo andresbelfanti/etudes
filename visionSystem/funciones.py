@@ -2,11 +2,19 @@
 ##=======deteccion de circulos y envio por osc + ventana==============================================
 import cv2
 import numpy as np
+from pythonosc.udp_client import SimpleUDPClient
+
+
+
 
 #=====================OSC SENDER=======================
 def oscSender(data):
-    print(data) #aca un protocolo de envio de daatos
-
+ 
+    ip = "192.168.0.31"
+    port  = 12000
+    client = SimpleUDPClient(ip, port)  # Create client
+     
+    client.send_message("/cv", data.tolist())  # Send message with int, float and string
 #=======================================================
 
 def circleDetection(frame):
@@ -30,10 +38,10 @@ def circleDetection(frame):
 #param_2 = 100*: Threshold for center detection.
 #min_radius = 0: Minimum radius to be detected. If unknown, put zero as default.
 #max_radius = 0: Maximum radius to be detected. If unknown, put zero as default
-
+   
+   
+   
     if np.any(circles):
-        print("------------------")
-        
         oscSender(circles)
 
         for co, i in enumerate(circles[0, :]):

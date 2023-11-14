@@ -11,15 +11,16 @@
 ## si algunas cosas no funcionan instaladas desde consola se puede revisar si estan desde synaptics
 
 import unicodedata
-import schedule
+#import schedule
 import time
 import os
-import subprocess
-import schedule
+#import subprocess
 #import unidecode
 import datetime
 import numpy as np
 import cv2
+from pythonosc.udp_client import SimpleUDPClient
+
 from funciones import testserial, datalogger, connect, circleDetection
 
 #datalogger("started")
@@ -36,6 +37,8 @@ from funciones import testserial, datalogger, connect, circleDetection
 ## start code
 
 
+
+## video start ======================================
 video_capture = cv2.VideoCapture(0)
 
 while True:
