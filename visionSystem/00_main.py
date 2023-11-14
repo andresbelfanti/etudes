@@ -21,7 +21,7 @@ import numpy as np
 import cv2
 from pythonosc.udp_client import SimpleUDPClient
 
-from funciones import testserial, datalogger, connect, circleDetection
+from funciones import testserial, datalogger, connect, circleDetection, readSerial, moveToPos, moveToAngle 
 
 #datalogger("started")
 #connect()
@@ -32,20 +32,27 @@ from funciones import testserial, datalogger, connect, circleDetection
 #schedule.every(10).seconds.do() ## ejemplos de schedule para realizar una secuencia
 #schedule.every().hour.at(":45").do(sleep)
 
+#en schedule
+#orden de movimiento
+#chek de posicion
+
 
 #============================================
-## start code
+## start Serial
+connect()
 
-
-
-## video start ======================================
+## video start 
 video_capture = cv2.VideoCapture(0)
 
+#main loop
 while True:
     ret, frame = video_capture.read()
     circleDetection(frame) # deteccion de circulos
+    dataClass(readSerial())
 
 
+
+#break
     if cv2.waitKey(1) & 0xFF == ord('&'):
         break
 # Release handle to the webcam
