@@ -8,13 +8,43 @@ import time
 import datetime
 import math
 import pandas as pd
-# Creating Empty DataFrame and Storing it in variable df 
-df = pd.read_csv("/home/andrex/ANDY/shared/CCEBA 2023/CCEBA_codes y material/etudes/visionSystem/database.csv") 
-angles=[]
-data=[0,0,0,0,0,0,0]
+import matplotlib.pyplot as plt
+from mpl_toolkits import mplot3d
+
+# Creating Empty DataFrame and Storing it in variable df
+df = pd.DataFrame(columns= ['angleX', 'angleY', 'angleZ', 'posX', 'posY', 'posZ', 'gyro0', 'gyro1', 'lidar', 'accel', 'deccel', 'stops', 'works']) 
+print(df.shape)
+
+    # Creating figure
+fig = plt.figure(figsize = (10, 7))
+ax = plt.axes(projection ="3d")
+plt.title("clasificacion posiciones")
 
 
 ##==================FUNCIONES DE SCHEDULE, LOGGER Y OSC=====================
+
+###-plotter of positions -----------------------
+def plotter():
+    # Creating plot
+    ax.scatter3D(df["posX"][0:], df["posY"][0:], df["posZ"][0:], c = df["works"][0:])
+   
+    # show plot
+    plt.ion()
+    plt.pause(0.001)
+    plt.show()
+
+## -- save database-------------
+def save(angles, pos, data, speed, n):
+    stops = 0
+    if any(x == 1 for x in data[4:8]):
+        stops = 1
+
+    df.loc[len(df)] = angles[0], angles[1], angles[2], pos[0], pos[1], pos[2], data[0], data[1], data[2], speed[0], speed[1], stops, n
+    df.to_csv("database.csv", encoding='utf-8')
+    print("df len: "+ str(len(df)))
+    print(df.shape)
+    plotter()
+
 # DATALOGGER FUNCION ====================================================
 def datalogger(event):
     now = datetime.datetime.now()
@@ -46,8 +76,8 @@ def circleDetection(frame):
     # apply a blur using the median filter
     img = cv2.medianBlur(img, 5)    
     # find circles in grayscale image using the Hough transform
-    circles = cv2.HoughCircles(image=img, method=cv2.HOUGH_GRADIENT, dp=0.009, 
-                            minDist=0.01, param1=50, param2=10, minRadius=1, maxRadius=10)
+    circles = cv2.HoughCircles(image=img, method=cv2.HOUGH_GRADIENT, dp=0.9, 
+                            minDist=1, param1=50, param2=15, minRadius=1, maxRadius=10)
 
 #gray: Input image (grayscale).
 #circles: A vector that stores sets of 3 values: xc,yc,r for each detected circle.
@@ -96,23 +126,20 @@ def connect():
 
 ##  serial con return ========================
 def readSerial():
+    msg = []
     global ser
-    global data
-    try:
-        msg = ser.read(ser.inWaiting()) # read everything in the input buffer
-        data=msg.split(",")
-        #print (msg)
-    except Exception as e: 
-        datalogger(e)
+    msg = ser.read(ser.inWaiting()) # read everything in the input buffer
+    msg= msg.split(",")
+    return(msg)
 
 #==============send angles=========================
-def moveToAngle(angles):
+def moveToAngle(angles, gyro):
     print("movetoangle")
     global ser
     global data
-    angles[0]=angles[0]-data[0]# hombro
-    angles[1]=angles[1]-data[1]+data[0] #codo 
-    angles[2] = angles[2]-data[2] #base - No tiene sensor!!!
+    angles[0]=angles[0]-gyro[0]# hombro
+    angles[1]=angles[1]-gyro[1]+gyro[0] #codo 
+    angles[2] = angles[2]-gyro[2] #base - No tiene sensor!!!
     try:
         ser.write(str(angles)+"\n")
     except Exception as e:
@@ -128,8 +155,5 @@ def sends(data): #envia otra data, como luces, sleep
         datalogger(e)
         print(e)
 
-def save(q,w,e,r,t,y,u,i):
-    df.loc[-1] = q,w,e,r,t,y,u,i  # adding a row
-    df.to_csv("database.csv", encoding='utf-8')
 
 

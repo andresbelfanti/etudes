@@ -15,8 +15,8 @@ import serial
 
 data = [0,0,0,0,0,0,0]
 pos = [1,1,1]
-angles = []
-speed = []
+angles = [0,0,0]
+speed = [0,0]
 
 from funciones import  datalogger, circleDetection, moveToPos, moveToAngle, connect, readSerial, sends, save
 
@@ -25,7 +25,7 @@ def draw(event):# este evento que sucede por el mouse - despues en automatico
     global pos
     # Get the current mouse position
     pos= [event.x, event.y, Slider1.get()]
-    zn=pos[2]*0.1
+    zn=pos[2]*0.02
     # Draw a dot on the canvas at the current mouse position 
     canvas.create_oval(pos[0]-zn, pos[1]-zn, pos[0]+zn, pos[1]+zn, fill='black')
     #text.insert('1.0', 'x: '+ str(pos[0]) + 'y: ' + str(pos[1])+ 'z: ' + str(pos[2])+ '\n')
@@ -35,12 +35,13 @@ def moveYprint():
     global pos
     global angles
     global speed
+    global data
     speed =[Slider2.get(), Slider3.get()]
     angles= moveToPos(pos[0]*0.01, pos[1]*0.01, pos[2]*0.1)
     yes=True
 
     sends("speed:"+str(speed)+'\n')
-    moveToAngle(angles)
+    moveToAngle(angles, data)
     
     text.insert('1.0', 'pos:  '+ str(pos)+'\n')
     text.insert('1.0', "speed:"+str(speed)+'\n')
@@ -78,17 +79,25 @@ Slider2 = tk.Scale(window, from_=200, to=0, orient=tk.VERTICAL, length=200)
 Slider2.grid(row=0, column=3)
 Slider3 = tk.Scale(window, from_=200, to=0, orient=tk.VERTICAL, length=200)
 Slider3.grid(row=0, column=4)
-on_button = tk.Button(
+ok_button = tk.Button(
     window,  
-    text='YES', 
-    command=lambda: save(pos[0], pos[1], angles[0], angles[1], angles[2], speed[0], speed[1], 1)
+    text='SI', 
+    command=lambda: save(angles, pos, data, speed, 1)
 )
-on_button.grid(row=1, column=4)
+ok_button.grid(row=1, column=4)
+not_button = tk.Button(
+    window,  
+    text='NO', 
+    command=lambda: save(angles, pos, data, speed, 0)
+)
+not_button.grid(row=2, column=4)
+
+
 ##==========INIT============================
 datalogger("started")
 connect()
 print("connected")
-time.sleep(2)
+time.sleep(1)
 #schedule.every(10).seconds.do() ## ejemplos de schedule para realizar una secuencia
 #schedule.every().hour.at(":45").do(sleep)
 
@@ -107,7 +116,10 @@ video_capture = cv2.VideoCapture(0)
 while True:
     ret, frame = video_capture.read()
     circleDetection(frame) # deteccion de circulos
-    readSerial()
+    try:
+        data=readSerial()
+    except:
+        data=data
 
     #oscsender()
     canvas.bind('<Button-1>', draw)
