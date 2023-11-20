@@ -18,6 +18,9 @@ Adafruit_MPU6050 mpu1;
 Adafruit_Sensor *mpu_temp0, *mpu_accel0, *mpu_gyro0;
 Adafruit_Sensor *mpu_temp1, *mpu_accel1, *mpu_gyro1;
 
+
+
+
 #define SLEEP 8
 
 #define MOTOR_STEPS 200
@@ -26,7 +29,7 @@ Adafruit_Sensor *mpu_temp1, *mpu_accel1, *mpu_gyro1;
 // Target RPM for Y axis motor
 #define MOTOR_Y_RPM 80
 // Target RPM for Y axis motor
-#define MOTOR_Z_RPM 1800
+#define MOTOR_Z_RPM 80
 
 #define MOTOR_ACCEL 20
 #define MOTOR_DECEL 20
@@ -53,13 +56,14 @@ SyncDriver controller(stepperX, stepperY, stepperZ);
 // === variables globales ==============================
 bool motorFree = true;
 int a[3] = {0,0,0};
+byte inByte;
 
 // ===0setup======================
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
    Serial.println("starting");
   delay(1000);
-  lidarBegin();
+ // lidarBegin();
   delay(1000);
 
   stepperX.begin(MOTOR_X_RPM, MICROSTEPS);
@@ -79,29 +83,24 @@ void setup() {
 
   stepperX.setSpeedProfile(stepperX.LINEAR_SPEED, MOTOR_ACCEL, MOTOR_DECEL);
   stepperY.setSpeedProfile(stepperY.LINEAR_SPEED, MOTOR_ACCEL, MOTOR_DECEL);
-  stepperZ.setSpeedProfile(stepperY.LINEAR_SPEED, 200, 200);
+  stepperZ.setSpeedProfile(stepperZ.LINEAR_SPEED, MOTOR_ACCEL, MOTOR_DECEL);
   
   Serial.println("setupFinished");
   delay(1000);
 }
 void loop() {
-  int a[3] = {0,0,0};
 
   if(millis()%10==0){// lectura cada n milisegundos para no bloquear
-   try{
-    gyroRead();
-    lidarRead();
-    interrupts();
-    catch(ExceptionIo as e){
-      Serial.println(e);
-    }
+   
    }
-  }
 
   while (Serial.available()) {
     readSerial();
+    Serial.println(a[1]);
     controller.startRotate(a[0], a[1] , a[2] ); //este es el modo non Blocking
     motorFree = false;
+    //int a[3] = {0,0,0};
+
   }
 
   unsigned wait_time_micros = controller.nextAction();  // motor control loop - send pulse and return how long to wait until next pulse
@@ -120,15 +119,36 @@ void readSerial(){
     inByte = Serial.readStringUntil('\n'); // read data until newline
    
   // ordenes discretas por serial - son strings
+    
     if (inByte == "off") { // orden de prendido y apagado desde el serial
    stepperX.setEnableActiveState(HIGH);
    stepperY.setEnableActiveState(HIGH);
    stepperZ.setEnableActiveState(HIGH);
+   stepperX.disable(); 
+   stepperY.disable();
+   stepperZ.disable();
     }
     if (inByte == "on") {
-    stepperX.setEnableActiveState(HIGH);
-    stepperY.setEnableActiveState(HIGH);
-    stepperZ.setEnableActiveState(HIGH);
+    stepperX.setEnableActiveState(LOW);
+    stepperY.setEnableActiveState(LOW);
+    stepperZ.setEnableActiveState(LOW);
+    stepperX.enable(); 
+    stepperY.enable();
+    stepperZ.enable();
+    }
+    if (inByte == "speed:") {
+      int acel = {0,0};
+      acel[0] = getValue(inByte, ',', 0).toInt(); // Angulos a la var global
+      acel[1] = getValue(inByte, ',', 1).toInt();
+      stepperX.setSpeedProfile(stepperX.LINEAR_SPEED,  acel[0], acel[1]);
+      stepperY.setSpeedProfile(stepperY.LINEAR_SPEED,  acel[0], acel[1]);
+      stepperZ.setSpeedProfile(stepperZ.LINEAR_SPEED,  acel[0], acel[1]);
+
+    }
+    if (inByte == "stop") {
+    controller.startRotate(0,0,0); //este es el modo non Blocking
+        motorFree = false;
+
     }
   // si solo son numeros cuentan como coordenadas
     else {
@@ -137,8 +157,9 @@ void readSerial(){
       a[2] = getValue(inByte, ',', 2).toInt();
     }
   } 
-  Serial.Println("received"); 
-
+  Serial.print("received: "); 
+  Serial.println(inByte);
+  
 }
 //==========getValue=======================================
 String getValue(String data, char separator, int index)
@@ -159,6 +180,7 @@ String getValue(String data, char separator, int index)
 }
 
 //=======Lidar Begin==========================================
+/*
 void lidarBegin() {
   if(!lox.begin()) {
     Serial.println(F("Failed to boot VL53L0X"));
@@ -181,7 +203,7 @@ void lidarRead() {
 
 void gyroRead() {  ///>>>>>>> lectura de giroscopios
 
-  //  /* Get a new normalized sensor event */
+  //   Get a new normalized sensor event
   sensors_event_t gyro0;
   sensors_event_t gyro1;
   mpu_gyro0->getEvent(&gyro0);
@@ -196,10 +218,10 @@ void gyroRead() {  ///>>>>>>> lectura de giroscopios
   Serial.print(x1);
   Serial.println();
 }
-
+*/
 ///=====================interrupt pins read===============
 
-void interrupts(){
+void interruptors(){
 // acá tambien una orden local, por si se desconecta del usb y sigue andando 
 // aca digital read de los pines de final d ecarrera
 

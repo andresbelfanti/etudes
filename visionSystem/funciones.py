@@ -2,16 +2,23 @@
 ##=======deteccion de circulos y envio por osc + ventana==============================================
 import cv2
 import numpy as np
-from pythonosc.udp_client import SimpleUDPClient
+#from pythonosc.udp_client import SimpleUDPClient
 import serial
-
+import time
+import datetime
+import math
+import pandas as pd
+# Creating Empty DataFrame and Storing it in variable df 
+df = pd.read_csv("/home/andrex/ANDY/shared/CCEBA 2023/CCEBA_codes y material/etudes/visionSystem/database.csv") 
+angles=[]
+data=[0,0,0,0,0,0,0]
 
 
 ##==================FUNCIONES DE SCHEDULE, LOGGER Y OSC=====================
 # DATALOGGER FUNCION ====================================================
 def datalogger(event):
     now = datetime.datetime.now()
-    print (now.day, now.month, now.year, now.hour, now.minute, now.second)
+   # print (now.day, now.month, now.year, now.hour, now.minute, now.second)
 
     tlog=str(now.day)+str(now.month)+".txt"
     with open(tlog, "a") as myfile:
@@ -21,12 +28,11 @@ def datalogger(event):
 
 #=====================OSC SENDER=======================
 def oscSender(data):
- 
-    ip = "192.168.0.31"
-    port  = 12000
-    client = SimpleUDPClient(ip, port)  # Create client
-     
-    client.send_message("/cv", data.tolist())  # Send message with int, float and string
+   print("oscSender")
+   ip = "192.168.0.31"
+   port  = 12000
+   client = SimpleUDPClient(ip, port)  # Create client  
+   client.send_message("/cv", data.tolist())  # Send message with int, float and string
 
 ##=======================FUNCIONES DE CAMARA Y ANALISIS VISUAL====================================
 #=========circles deteccion=====================================
@@ -53,11 +59,9 @@ def circleDetection(frame):
 #min_radius = 0: Minimum radius to be detected. If unknown, put zero as default.
 #max_radius = 0: Maximum radius to be detected. If unknown, put zero as default
     if np.any(circles):
-        oscSender(circles)
+       # oscSender(circles) #acá en vez de mandarlo directo , hacer un merge de data con PANDAS
         for co, i in enumerate(circles[0, :]):
             # draw the outer circle with radius i[2] in green
-           # cv2.rectangle(img, (x, y), (20,20), (0, 0, 100), 3)
-            # draw the center as a circle with radius 2 in red
             cv2.circle(frame,(int(i[0]),int(i[1])),int(i[2]),(0,255,0),1)
             
     try:
@@ -69,12 +73,11 @@ def circleDetection(frame):
 ##=========== DESDE ACÁ TODAS LAS FUNCIONES RELACIONADAS A COMUNICACION ARDUINO Y MOV ROBOT==================
 #===================IK SOLVER===========================
 def moveToPos(x, y, z):
-    
-    b = atan2(y, x) * (180 / 3.1415);  # base angle
-    l = sqrt(x * x + y * y);  # x and y extension
-    h = sqrt(l * l + z * z);
-    phi = atan(z / l) * (180 / 3.1415);
-    theta = acos((h / 2) / 75) * (180 / 3.1415);
+    b = math.atan2(y, x) * (180 / 3.1415);  # base angle
+    l = math.sqrt(x * x + y * y);  # x and y extension
+    h = math.sqrt(l * l + z * z);
+    phi = math.atan(z / l) * (180 / 3.1415);
+    theta = math.acos((h / 2) / 75) * (180 / 3.1415);
     a1 = phi + theta;  # angle for first part of the arm
     a2 = phi - theta;  # angle for second part of the arm
 
@@ -85,25 +88,31 @@ def moveToPos(x, y, z):
 def connect():
     global ser
     try:
-        ser = serial.Serial(USB, 9600) # y si cambiamos la velocidad del serial??
+        ser = serial.Serial('/dev/ttyUSB0', 115200)
         time.sleep(3)
     except Exception as e: 
         datalogger(e)
-        exit()
+       # exit()
 
-## Test serial con return ========================
+##  serial con return ========================
 def readSerial():
     global ser
+    global data
     try:
         msg = ser.read(ser.inWaiting()) # read everything in the input buffer
+        data=msg.split(",")
         #print (msg)
-        return(msg) ## ACA MODIFICAR
     except Exception as e: 
         datalogger(e)
 
 #==============send angles=========================
 def moveToAngle(angles):
+    print("movetoangle")
     global ser
+    global data
+    angles[0]=angles[0]-data[0]# hombro
+    angles[1]=angles[1]-data[1]+data[0] #codo 
+    angles[2] = angles[2]-data[2] #base - No tiene sensor!!!
     try:
         ser.write(str(angles)+"\n")
     except Exception as e:
@@ -118,10 +127,9 @@ def sends(data): #envia otra data, como luces, sleep
     except Exception as e:
         datalogger(e)
         print(e)
-        
-def dataClass(): # separación de data por etiquetas
-    print("paceholder")
-    # lidar: int
-    #gyro: float, float
-    # stops: false/true 
+
+def save(q,w,e,r,t,y,u,i):
+    df.loc[-1] = q,w,e,r,t,y,u,i  # adding a row
+    df.to_csv("database.csv", encoding='utf-8')
+
 

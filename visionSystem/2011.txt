@@ -1,0 +1,1830 @@
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 29 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 30 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 31 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 32 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 33 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 34 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 35 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 36 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 37 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 38 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 39 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 40 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 41 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 42 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 43 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 44 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 45 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 46 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 47 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 48 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 49 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 50 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 51 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 52 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 53 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 54 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 55 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 56 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 57 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 58 
+name 'ser' is not defined
+20 11 2023 14 9 59 
+name 'ser' is not defined
+20 11 2023 14 9 59 
+name 'ser' is not defined
+20 11 2023 14 9 59 
+name 'ser' is not defined
+20 11 2023 14 9 59 
+name 'ser' is not defined
+20 11 2023 14 9 59 
+name 'ser' is not defined
+20 11 2023 14 9 59 
+name 'ser' is not defined
+20 11 2023 14 9 59 
+name 'ser' is not defined
+20 11 2023 14 9 59 
+name 'ser' is not defined
+20 11 2023 14 9 59 
+name 'ser' is not defined
+20 11 2023 14 9 59 
+name 'ser' is not defined
+20 11 2023 14 9 59 
+name 'ser' is not defined
+20 11 2023 14 9 59 
+name 'ser' is not defined
+20 11 2023 14 9 59 
+name 'ser' is not defined
+20 11 2023 14 9 59 
+name 'ser' is not defined
