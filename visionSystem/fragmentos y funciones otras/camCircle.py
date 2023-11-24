@@ -15,6 +15,7 @@ def circleDetection(frame):
     # find circles in grayscale image using the Hough transform
     circles = cv2.HoughCircles(image=img, method=cv2.HOUGH_GRADIENT, dp=0.009, 
                             minDist=0.01, param1=50, param2=10, minRadius=1, maxRadius=10)
+   
 
 #gray: Input image (grayscale).
 #circles: A vector that stores sets of 3 values: xc,yc,r for each detected circle.
@@ -26,15 +27,18 @@ def circleDetection(frame):
 #min_radius = 0: Minimum radius to be detected. If unknown, put zero as default.
 #max_radius = 0: Maximum radius to be detected. If unknown, put zero as default
 
-    if np.any(circles):
-        print("------------------")
-        print("number of circles: ", len(circles[0, :]))
-
+    if np.any(circles): 
+        dataArray= []
+        dataArray.append(len(circles[0, :]))
         for co, i in enumerate(circles[0, :]):
             # draw the outer circle with radius i[2] in green
            # cv2.rectangle(img, (x, y), (20,20), (0, 0, 100), 3)
             # draw the center as a circle with radius 2 in red
             cv2.circle(frame,(int(i[0]),int(i[1])),int(i[2]),(0,255,0),1)
+            for n in i:
+                dataArray.append(n)
+        print(dataArray)
+
             
     try:
         cv2.imshow('Video', frame)

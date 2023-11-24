@@ -5,9 +5,17 @@ d.keys
 
 (
 OSCdef(\opencv, {|msg|
-	msg[0].postln;
+	msg.postln;
 }, \cv, recvPort:12000)
 )
+
+
+
+
+
+
+
+
 
 //[nº1 circle, x y size]//
 
@@ -43,10 +51,11 @@ a.collect({
 
 ////Ejemplo ordenando la data y una routine
 
+
 (
 ~sinSeq = r{
 	loop{
-		~circulitos = rrand(10, 100);
+	~circulitos = rrand(10, 100);
 	~data = Array.fill2D(~circulitos, 3, { arg r, c; rrand(100, 2000)});
 
 	~minmax = [[], [], []];
@@ -298,6 +307,56 @@ b.free
 
 
 
+
+///Data recibida
+(
+OSCdef(\opencv, {|msg|
+	~grains = msg[1].postln
+}, \cv, recvPort:12000)
+)
+
+~grains
+
+
+
+(
+~grains.collect({
+	|i|
+
+	Synth(\tgrain,
+	[
+		\buf, d["pianola"][0],
+		\freq, 1,
+		\grains, ~grains * 10,
+		\amp, rrand(0.1,0.8),
+		\sus, rrand(0.1,1),
+		\atk, 0,
+		\rel, rrand(0.5,2)]
+)}
+)
+)
+
+(
+SynthDef(\tgrain, {
+	var clk, pos, pan, sig, env, dur, rate;
+	dur = 4 / \freq.kr(1, 1);
+    rate = Dseq([10, 1, 1, 0.5, 0.5, 0.2, 0.1], inf);
+	env = EnvGen.ar(Env.linen(\atk.kr(0),\sus.kr(0),\rel.kr(1)),1,1,0,1,2);
+	dur = 12 / \grains.kr(1);
+	clk = Impulse.ar(\grains.kr(1));
+	pos = TRand.kr(0, BufDur.kr(\buf.kr(1)), clk);
+	pan = WhiteNoise.kr(0.6);
+	sig = TGrains.ar(2, clk, \buf.kr(1), rate, pos, dur, pan, \amp.kr(0.5));
+	sig = sig * env;
+	Out.ar(\out.kr(0), sig)
+	}).add;
+)
+
+
+
+
+///////GUI///////
+~central = Window("Data", Rect(200, 200, 255, 100))
 
 
 

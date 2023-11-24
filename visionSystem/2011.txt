@@ -67792,3 +67792,61 @@ started
 name 'ser' is not defined
 20 11 2023 18 40 4 
 name 'ser' is not defined
+20 11 2023 18 41 10 
+started
+20 11 2023 18 41 10 
+[Errno 2] could not open port /dev/ttyUSB0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+20 11 2023 18 41 11 
+[Errno 2] could not open port /dev/ttyUSB0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+20 11 2023 18 41 19 
+name 'ser' is not defined
+20 11 2023 18 41 19 
+name 'ser' is not defined
+20 11 2023 18 41 26 
+name 'ser' is not defined
+20 11 2023 18 41 26 
+name 'ser' is not defined
+20 11 2023 18 41 29 
+name 'ser' is not defined
+20 11 2023 18 41 29 
+name 'ser' is not defined
+20 11 2023 18 41 31 
+name 'ser' is not defined
+20 11 2023 18 41 31 
+name 'ser' is not defined
+20 11 2023 18 41 35 
+name 'ser' is not defined
+20 11 2023 18 41 35 
+name 'ser' is not defined
+20 11 2023 18 41 38 
+name 'ser' is not defined
+20 11 2023 18 41 38 
+name 'ser' is not defined
+20 11 2023 18 41 41 
+name 'ser' is not defined
+20 11 2023 18 41 41 
+name 'ser' is not defined
+20 11 2023 18 41 44 
+name 'ser' is not defined
+20 11 2023 18 41 44 
+name 'ser' is not defined
+20 11 2023 18 41 48 
+name 'ser' is not defined
+20 11 2023 18 41 48 
+name 'ser' is not defined
+20 11 2023 18 41 51 
+name 'ser' is not defined
+20 11 2023 18 41 51 
+name 'ser' is not defined
+20 11 2023 18 41 56 
+name 'ser' is not defined
+20 11 2023 18 41 56 
+name 'ser' is not defined
+20 11 2023 18 42 1 
+name 'ser' is not defined
+20 11 2023 18 42 1 
+name 'ser' is not defined
+20 11 2023 18 42 5 
+name 'ser' is not defined
+20 11 2023 18 42 5 
+name 'ser' is not defined

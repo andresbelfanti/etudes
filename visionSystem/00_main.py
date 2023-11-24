@@ -13,12 +13,15 @@ import tkinter as tk
 import serial
   
 
-data = [0,0,0,0,0,0,0]
-pos = [1,1,1]
-angles = [0,0,0]
-speed = [0,0]
+data = [0,0,0,0,0,0,0] # lo que recibe por serial
+pos = [1,1,1] # pos en ejes cartesianos
+angles = [0,0,0,0,0] # angulos y velocidad para pasar a funcion
+stateAngles= [0,0,0] #la posicion actual
 
-from funciones import  datalogger, circleDetection, moveToPos, moveToAngle, connect, readSerial, sends, save
+
+from funciones import  datalogger, circleDetection, moveToPos, moveToAngle, connect, readSerial, sends, save, initAngles
+
+
 
 ##===============GUI============================================
 def draw(event):# este evento que sucede por el mouse - despues en automatico
@@ -34,19 +37,27 @@ def draw(event):# este evento que sucede por el mouse - despues en automatico
 def moveYprint():
     global pos
     global angles
-    global speed
-    global data
-    speed =[Slider2.get(), Slider3.get()]
-    angles= moveToPos(pos[0]*0.01, pos[1]*0.01, pos[2]*0.1)
+    global satetAngles
+   
+    angles[3] =Slider2.get()
+    angles[4]=Slider3.get()
+   
+    angles[0:3]= moveToPos(pos[0]*0.1, pos[1]*0.1, pos[2]*0.1)
     yes=True
 
-    sends("speed:"+str(speed)+'\n')
-    moveToAngle(angles, data)
-    
-    text.insert('1.0', 'pos:  '+ str(pos)+'\n')
-    text.insert('1.0', "speed:"+str(speed)+'\n')
-    text.insert('1.0', 'Angles:  '+ str(angles)+'\n')
+    diff =moveToAngle(angles, stateAngles) #(angulos calculados por moveToPos, data del serial[giroscopios]) hace un return en caso de falla
+
+
+    text.insert('1.0', '-------------------------'+'\n')
+    text.insert('1.0', "speed: "+str(angles[3])+" "+str(angles[4])+'\n')
+    text.insert('1.0', 'diff: '+str(diff) +'\n')
+    text.insert('1.0', 'Angles obj:  '+ str(angles[0])+" "+ str(angles[1])+" "+ str(angles[2])+'\n')
+    text.insert('1.0', 'angulo Actual:  '+ str(stateAngles)+'\n')
+    text.insert('1.0', 'nueva pos:  '+ str(pos)+'\n')
    
+    stateAngles[0]= angles[0]
+    stateAngles[1] = angles[1]
+    stateAngles[2]=angles[2]
    # save([pos,angles, speed, yes])
 ##---------------------------------------------------
 
@@ -55,8 +66,8 @@ window = tk.Tk()
 # Create a Tkinter canvas
 canvas = tk.Canvas(window, width=600, height=400, bg='green')
 # Draw the cartesian axis (or grid) on the canvas
-canvas.create_line(0, 200, 600, 200, width=1)  # x-axis
-canvas.create_line(300, 0, 300, 600, width=1)  # y-axis
+canvas.create_line(0, 200, 600, 200, width=0.5)  # x-axis
+canvas.create_line(300, 0, 300, 600, width=0.5)  # y-axis
 ## elementos dentro de la ventana
 text = tk.Text(window, height=8)
 text.grid(row=1, column=0)
@@ -69,10 +80,7 @@ off_button = tk.Button(window, text='OFF',  command=lambda: sends("off"))
 off_button.grid(row=2, column=1)
 on_button = tk.Button(window, text='ON',  command=lambda: sends("on"))
 on_button.grid(row=3, column=1)
-off_button = tk.Button(window, text='OFF',  command=lambda: sends("off"))
-off_button.grid(row=2, column=1)
-on_button = tk.Button(window, text='ON',  command=lambda: sends("on"))
-on_button.grid(row=3, column=1)
+
 Slider1 = tk.Scale(window, from_=600, to=0, orient=tk.VERTICAL, length=200)
 Slider1.grid(row=0, column=2)
 Slider2 = tk.Scale(window, from_=200, to=0, orient=tk.VERTICAL, length=200)
@@ -95,29 +103,28 @@ not_button.grid(row=2, column=4)
 
 ##==========INIT============================
 datalogger("started")
-connect()
-print("connected")
-time.sleep(1)
 #schedule.every(10).seconds.do() ## ejemplos de schedule para realizar una secuencia
 #schedule.every().hour.at(":45").do(sleep)
-
 #en schedule
 #orden de movimiento
 #chek de posicion
 
 ## start Serial
-print("startin")
-connect()
+print("conexion USB: ")
+print(connect())
+
+stateAngles=initAngles()
 
 ## video start 
 video_capture = cv2.VideoCapture(0)
-
 #main loop
 while True:
     ret, frame = video_capture.read()
     circleDetection(frame) # deteccion de circulos
+    
     try:
         data=readSerial()
+        print(data)
     except:
         data=data
 

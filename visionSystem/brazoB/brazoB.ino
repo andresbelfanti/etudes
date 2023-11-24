@@ -14,11 +14,11 @@ Adafruit_VL53L0X lox = Adafruit_VL53L0X();
 // Arduino Wire library is required if I2Cdev I2CDEV_ARDUINO_WIRE implementation
 // is used in I2Cdev.h
 #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
-    #include "Wire.h"
+#include "Wire.h"
 #endif
 
 MPU6050 accelgyroA;
-MPU6050 accelgyroB(0x69); // <-- use for AD0 high
+MPU6050 accelgyroB(0x69);  // <-- use for AD0 high
 
 int16_t axA, ayA, azA;
 int16_t gxA, gyA, gzA;
@@ -61,23 +61,26 @@ SyncDriver controller(stepperX, stepperY, stepperZ);
 
 // === variables globales ==============================
 bool motorFree = true;
-int a[3] = {0,0,0};
-int datas[6]={0,0,0,0,0,0};
+int a[5] = { 0, 0, 0, 0, 0};
+int datas[6] = { 0, 0, 0, 0, 0, 0 };
 byte inByte;
-
+bool stop = false;
 // ===0setup======================
 void setup() {
-  
+  pinMode(9, INPUT_PULLUP);
+  pinMode(10, INPUT_PULLUP);
+  pinMode(11, INPUT_PULLUP);
+
   Serial.begin(115200);
-  while (! Serial) {
+  while (!Serial) {
     delay(1);
   }
-    Serial.println("starting");
+  Serial.println("starting");
   delay(1000);
   lidarBegin();
   delay(1000);
 
-//----------------------------------------
+  //----------------------------------------
   stepperX.begin(MOTOR_X_RPM, MICROSTEPS);
   stepperY.begin(MOTOR_Y_RPM, MICROSTEPS);
   stepperZ.begin(MOTOR_Z_RPM, MICROSTEPS);
@@ -85,39 +88,57 @@ void setup() {
   stepperX.setEnableActiveState(LOW);
   stepperY.setEnableActiveState(LOW);
   stepperZ.setEnableActiveState(LOW);
-  
+
   Serial.println("motorsOn");
   delay(1000);
 
-  stepperX.enable(); // este tambien va?
+  stepperX.enable();  // este tambien va?
   stepperY.enable();
   stepperZ.enable();
 
   stepperX.setSpeedProfile(stepperX.LINEAR_SPEED, MOTOR_ACCEL, MOTOR_DECEL);
   stepperY.setSpeedProfile(stepperY.LINEAR_SPEED, MOTOR_ACCEL, MOTOR_DECEL);
   stepperZ.setSpeedProfile(stepperZ.LINEAR_SPEED, MOTOR_ACCEL, MOTOR_DECEL);
-  
+
   Serial.println("setupFinished");
   delay(1000);
 }
 void loop() {
 
-  if(millis()%10==0){// lectura cada n milisegundos para no bloquear
-   Serial.print(datas);
-   }
+  if (millis() % 250 == 0) {  // lectura cada n milisegundos para no bloquear
+    interruptors();
+    Serial.print(datas[0]);
+    Serial.print(",");
+    Serial.print(datas[1]);
+    Serial.print(",");
+    Serial.print(datas[2]);
+    Serial.print(",");
+    Serial.print(datas[3]);
+    Serial.print(",");
+    Serial.print(datas[4]);
+    Serial.print(",");
+    Serial.print(datas[5]);
+    Serial.print(",");
+    Serial.println(datas[6]);
+  }
 
   while (Serial.available()) {
     readSerial();
-    Serial.println(a[1]);
-    controller.startRotate(a[0], a[1] , a[2] ); //este es el modo non Blocking
+    controller.startRotate(a[0]*4, a[1]*3.75, a[2]*3.75);
+    stepperX.setSpeedProfile(stepperX.LINEAR_SPEED, a[3], a[4]);
+    stepperY.setSpeedProfile(stepperY.LINEAR_SPEED, a[3], a[4]);
+    stepperZ.setSpeedProfile(stepperZ.LINEAR_SPEED, a[3], a[4]);
+      //este es el modo non Blocking
     motorFree = false;
+    stop = false;
     //int a[3] = {0,0,0};
-
   }
+  unsigned wait_time_micros;
 
-  unsigned wait_time_micros = controller.nextAction();  // motor control loop - send pulse and return how long to wait until next pulse
-
-  if (wait_time_micros <= 0 && motorFree==false) {
+  if (stop == false) {
+    wait_time_micros = controller.nextAction();  // motor control loop - send pulse and return how long to wait until next pulse
+  }
+  if (wait_time_micros <= 0 && motorFree == false) {
     Serial.println("motorEnd");
     motorFree = true;
   }
@@ -125,51 +146,41 @@ void loop() {
 // =========== funciones=================================
 
 // =================readSerial=========================
-void readSerial(){
+void readSerial() {
   if (Serial.available()) {
     String inByte = "";
-    inByte = Serial.readStringUntil('\n'); // read data until newline
-       Serial.print("data received: "); 
+    inByte = Serial.readStringUntil('\n');  // read data until newline
+    Serial.print("data received: ");
 
-  
-    if (inByte == "off") { // orden de prendido y apagado desde el serial
-    digitalWrite(8, HIGH)
-    Serial.println("off")
+
+    if (inByte == "off") {  // orden de prendido y apagado desde el serial
+      digitalWrite(8, HIGH);
+      Serial.println("off");
     }
     if (inByte == "on") {
-    digitalWrite(8, LOW)
-        Serial.println("on")
+      digitalWrite(8, LOW);
+      Serial.println("on");
     }
-    if (inByte == "stop") { // stop
-    controller.startRotate(0,0,0); 
-        motorFree = false;
-            Serial.println("stop")
+    if (inByte == "stop") {  // stop
+      stop = true;
+      Serial.println("stop");
     }
-    if(inByte.indexOf("speed") > 0) { // aceleracion y desaceleracion
-      int acel = {0,0};
-      acel[0] = getValue(inByte, ',', 1).toInt(); 
-      acel[1] = getValue(inByte, ',', 2).toInt();
-      stepperX.setSpeedProfile(stepperX.LINEAR_SPEED,  acel[0], acel[1]);
-      stepperY.setSpeedProfile(stepperY.LINEAR_SPEED,  acel[0], acel[1]);
-      stepperZ.setSpeedProfile(stepperZ.LINEAR_SPEED,  acel[0], acel[1]);
-          Serial.println("speed")
-    }
-  // si solo son numeros cuentan como coordenadas
+   
+    // si solo son numeros cuentan como coordenadas
     else {
-      a[0] = getValue(inByte, ',', 0).toInt(); // Angulos a la var global
+      a[0] = getValue(inByte, ',', 0).toInt();  // Angulos a la var global
       a[1] = getValue(inByte, ',', 1).toInt();
       a[2] = getValue(inByte, ',', 2).toInt();
-      print("coords")
+      a[3] = getValue(inByte, ',', 3).toInt();
+      a[4] = getValue(inByte, ',', 4).toInt();
+      Serial.print("coords");
     }
-  } 
-
-  
+  }
 }
 //==========getValue=======================================
-String getValue(String data, char separator, int index)
-{
+String getValue(String data, char separator, int index) {
   int found = 0;
-  int strIndex[] = {0, -1};
+  int strIndex[] = { 0, -1 };
   int maxIndex = data.length() - 1;
 
   for (int i = 0; i <= maxIndex && found <= index; i++) {
@@ -186,54 +197,51 @@ String getValue(String data, char separator, int index)
 //=======Lidar Begin==========================================
 
 void lidarBegin() {
-  if(!lox.begin()) {
+  if (!lox.begin()) {
     Serial.println(F("Failed to boot VL53L0X"));
     delay(1);
-   };
-    
-  lox.startRangeContinuous();
-    Serial.println("LIDAR ON");
+  };
 
-  }
+  lox.startRangeContinuous();
+  Serial.println("LIDAR ON");
+}
 //===========lidar Read=======================================
 
 void lidarRead() {
   if (lox.isRangeComplete()) {
-     datas[3]=lox.readRange();
+    datas[3] = lox.readRange();
   }
 }
 //==============gyro Read=====================================
-void gyroBegin(){
+void gyroBegin() {
 #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
-        Wire.begin();
-    #elif I2CDEV_IMPLEMENTATION == I2CDEV_BUILTIN_FASTWIRE
-        Fastwire::setup(400, true);
-    #endif
+  Wire.begin();
+#elif I2CDEV_IMPLEMENTATION == I2CDEV_BUILTIN_FASTWIRE
+  Fastwire::setup(400, true);
+#endif
 
 
-    // initialize device
-    Serial.println("Initializing I2C devices...");
-    accelgyroA.initialize();
-    accelgyroB.initialize();
-    / verify connection
-    Serial.println("Testing device connections...");
-    Serial.println(accelgyroA.testConnection() ? "MPU6050A connection successful" : "MPU6050A connection failed");
-    Serial.println(accelgyroB.testConnection() ? "MPU6050B connection successful" : "MPU6050B connection failed");
+  // initialize device
+  Serial.println("Initializing I2C devices...");
+  accelgyroA.initialize();
+  accelgyroB.initialize();
+  Serial.println("Testing device connections...");
+  Serial.println(accelgyroA.testConnection() ? "MPU6050A connection successful" : "MPU6050A connection failed");
+  Serial.println(accelgyroB.testConnection() ? "MPU6050B connection successful" : "MPU6050B connection failed");
 }
 void gyroRead() {  ///>>>>>>> lectura de giroscopios
-/ read raw accel/gyro measurements from device
-    accelgyroA.getMotion6(&axA, &ayA, &azA, &gxA, &gyA, &gzA);
-    accelgyroB.getMotion6(&axB, &ayB, &azB, &gxB, &gyB, &gzB);
-    // buscar codigo nuevo. usar otra libreria
-
-    #endif
+  accelgyroA.getMotion6(&axA, &ayA, &azA, &gxA, &gyA, &gzA);
+  accelgyroB.getMotion6(&axB, &ayB, &azB, &gxB, &gyB, &gzB);
+  // buscar codigo nuevo. usar otra libreria
 }
-*/
 ///=====================interrupt pins read===============
 
-void interruptors(){
-datas[4]=digitalRead(9);
-datas[5]=digitalRead(10);
-datas[4]=digitalRead(11);
-
+void interruptors() {
+  datas[4] = digitalRead(9);
+  datas[5] = digitalRead(10);
+  datas[6] = digitalRead(11);
+  if ((datas[4] == 1) || (datas[5] == 1) || (datas[6] == 1)) {
+    stop = true;
+    Serial.println("STOP");
+  }
 }
