@@ -1,0 +1,34 @@
+1/12/2023 16:37:43 
+started
+1/12/2023 16:37:43 
+[Errno 2] could not open port /dev/ttyUSB0: [Errno 2] No existe el fichero o el directorio: '/dev/ttyUSB0'
+1/12/2023 17:25:18 
+started
+1/12/2023 17:25:18 
+[Errno 2] could not open port /dev/ttyUSB0: [Errno 2] No existe el fichero o el directorio: '/dev/ttyUSB0'
+1/12/2023 17:25:19 
+[Errno 2] could not open port /dev/ttyUSB0: [Errno 2] No existe el fichero o el directorio: '/dev/ttyUSB0'
+1/12/2023 17:28:11 
+started
+1/12/2023 17:28:11 
+[Errno 2] could not open port /dev/ttyUSB0: [Errno 2] No existe el fichero o el directorio: '/dev/ttyUSB0'
+1/12/2023 17:36:45 
+started
+1/12/2023 17:36:45 
+[Errno 2] could not open port /dev/ttyUSB0: [Errno 2] No existe el fichero o el directorio: '/dev/ttyUSB0'
+1/12/2023 19:30:15 
+started
+1/12/2023 19:32:10 
+started
+1/12/2023 19:35:45 
+started
+1/12/2023 19:38:6 
+started
+1/12/2023 19:39:18 
+started
+1/12/2023 19:40:8 
+started
+1/12/2023 19:40:25 
+started
+1/12/2023 19:42:58 
+started

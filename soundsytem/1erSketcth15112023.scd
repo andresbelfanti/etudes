@@ -119,7 +119,7 @@ SynthDef(\tgrain, {
 ~grainSeq = r{
 	loop{
 
-	~circulitos = rrand(1, 100);
+	~circulitos = rrand(1, 50);
 	~circulitos.postln;
 		~data = Array.fill2D(~circulitos, 3, { arg r, c; rrand(100, 2000)});
 
@@ -155,13 +155,13 @@ SynthDef(\tgrain, {
 			Synth(\tgrain, [
 				\buf, d["pianola"][0],
 				\freq, i[0].linlin(~min[0], ~max[0], 2, 200).round(),
-				\grains, i[1].linlin(~min[1], ~max[1], 0.1, 10),
+				\grains, i[1].linlin(~min[1], ~max[1], 1, 50),
 				\amp, i[0].linexp(~min[0],~max[0], 0.1, 0.3),
-				\sus, i[2].linlin(~min[2], ~max[2], 0, 2),
-				\atk, exprand(0,1.0),
-				\rel, rrand(0.5,2)]);
+				\sus, i[2].linlin(~min[2], ~max[2], 0, 0.1),
+				\atk, exprand(0,0.125),
+				\rel, rrand(0.125,1)]);
 	});
-	wait(5);
+		wait(rrand(0.125, 1));
 }}
 )
 
@@ -311,42 +311,49 @@ b.free
 ///Data recibida
 (
 OSCdef(\opencv, {|msg|
-	~grains = msg[1].postln
+	~size = msg[1].postln
+
 }, \cv, recvPort:12000)
 )
 
-~grains
+~grains =  Array.fill(50, rrand(1, 100));
+
+
+
 
 
 
 (
-~grains.collect({
-	|i|
+x = Synth(\tgrain,[
+	\buf, d["pianola"][0],
+	\gate, 0,
+	\grains, ~size,
+	\amp, rrand(0.4,0.7),
+	\sus, 1,
+	\atk, 0,
+	\rel, 10,
+	\rate, rrand(1, 20),
+	//\dur, rrand(0.1, 1)
+	]
+))
 
-	Synth(\tgrain,
-	[
-		\buf, d["pianola"][0],
-		\freq, 1,
-		\grains, ~grains * 10,
-		\amp, rrand(0.1,0.8),
-		\sus, rrand(0.1,1),
-		\atk, 0,
-		\rel, rrand(0.5,2)]
-)}
-)
-)
+x.set(\gate, 1)
+x.set(\grains, ~size/100)
+x.set(\rate, ~size/1000)
+x.set(\dur, ~size/100000)
+x.set(\amp, 1)
 
 (
 SynthDef(\tgrain, {
-	var clk, pos, pan, sig, env, dur, rate;
-	dur = 4 / \freq.kr(1, 1);
-    rate = Dseq([10, 1, 1, 0.5, 0.5, 0.2, 0.1], inf);
-	env = EnvGen.ar(Env.linen(\atk.kr(0),\sus.kr(0),\rel.kr(1)),1,1,0,1,2);
-	dur = 12 / \grains.kr(1);
+	var clk, pos, pan, sig, env, dur;
+	//dur = 4 / \freq.kr(1, 1);
+   // rate = Dseq([10, 1, 1, 0.5, 0.5, 0.2, 0.1], inf);
+	env = EnvGen.ar(Env.adsr(\atk.kr(0),0.3,1,\rel.kr(1)),\gate.kr(0),1,0,1,0);
+	//dur = 12 / \grains.kr(1);
 	clk = Impulse.ar(\grains.kr(1));
 	pos = TRand.kr(0, BufDur.kr(\buf.kr(1)), clk);
 	pan = WhiteNoise.kr(0.6);
-	sig = TGrains.ar(2, clk, \buf.kr(1), rate, pos, dur, pan, \amp.kr(0.5));
+	sig = TGrains.ar(2, clk, \buf.kr(1), \rate.kr(0), pos, \dur.kr(0.125), pan, \amp.kr(0.5));
 	sig = sig * env;
 	Out.ar(\out.kr(0), sig)
 	}).add;

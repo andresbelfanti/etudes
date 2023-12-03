@@ -4,7 +4,7 @@ from pythonosc.udp_client import SimpleUDPClient
 def oscSender():
    print("oscSender")
  
-   client.send_message("/cv", ".")  # Send message with int, float and string
+   client.send_message("/prueba", "1")  # Send message with int, float and string
 
 
 ip = "127.0.0.1"

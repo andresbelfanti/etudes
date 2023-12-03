@@ -11,19 +11,14 @@ import cv2
 from pythonosc.udp_client import SimpleUDPClient
 import tkinter as tk
 import serial
-from rich.console import Console
-from rich.text import Text
+  
 
-console = Console()
+data = [0,0,0,0,0,0,0]
+pos = [1,1,1]
+angles = [0,0,0]
+speed = [0,0]
 
-data = [0,0,0,0,0,0,0] # lo que recibe por serial
-pos = [1,1,1] # pos en ejes cartesianos
-angles = [0,0,0,0,0,0] # angulos y velocidad para pasar a funcion
-stateAngles= [0,0,0] #la posicion actual
-
-
-from funciones import  datalogger, circleDetection, moveToPos, moveToAngle, connect, readSerial, sends, save, initAngles
-
+from funciones import  datalogger, circleDetection, moveToPos, moveToAngle, connect, readSerial, sends, save
 
 ##===============GUI============================================
 def draw(event):# este evento que sucede por el mouse - despues en automatico
@@ -36,34 +31,22 @@ def draw(event):# este evento que sucede por el mouse - despues en automatico
     #text.insert('1.0', 'x: '+ str(pos[0]) + 'y: ' + str(pos[1])+ 'z: ' + str(pos[2])+ '\n')
     #text.insert('1.0', 'lidar: '+ str(data[0]) + 'gyrohombro: ' + str(data[1])+ 'gyrocodo: ' + str(data[2])+ '\n')
 
-def mover():
+def moveYprint():
     global pos
     global angles
-    global satetAngles
-   
-    angles[4] =Slider2.get()
-    angles[5]=Slider3.get()
-    
-    angles[0:3]= moveToPos(pos[0]*0.1, pos[1]*0.1, pos[2]*0.1)
-    angles[3]=Slider3.get()*0.1+90
+    global speed
+    global data
+    speed =[Slider2.get(), Slider3.get()]
+    angles= moveToPos(pos[0]*0.01, pos[1]*0.01, pos[2]*0.1)
     yes=True
 
-    diff =moveToAngle(angles, stateAngles) #(angulos calculados por moveToPos, data del serial[giroscopios]) hace un return en caso de falla
-
-
-    text.insert('1.0', '-------------------------'+'\n')
-    text.insert('1.0', "speed: "+str(angles[4])+" "+str(angles[5])+'\n')
-    text.insert('1.0', 'diff: '+str(diff) +'\n')
-    text.insert('1.0', 'Angles obj:  '+ str(angles[0])+" "+ str(angles[1])+" "+ str(angles[2])+'\n')
-    text.insert('1.0', 'angulo Actual:  '+ str(stateAngles)+'\n')
-    text.insert('1.0', 'nueva pos:  '+ str(pos)+'\n')
+    sends("speed:"+str(speed)+'\n')
+    moveToAngle(angles, data)
+    
+    text.insert('1.0', 'pos:  '+ str(pos)+'\n')
+    text.insert('1.0', "speed,"+str(speed)+'\n')
+    text.insert('1.0', 'Angles,  '+ str(angles)+'\n')
    
-    stateAngles[0]= angles[0]
-    stateAngles[1] = angles[1]
-    stateAngles[2]=angles[2]
-    console.print("POSICION", style="magenta")
-    console.print(stateAngles, style="magenta")
-
    # save([pos,angles, speed, yes])
 ##---------------------------------------------------
 
@@ -78,27 +61,20 @@ canvas.create_line(300, 0, 300, 600, width=1)  # y-axis
 text = tk.Text(window, height=8)
 text.grid(row=1, column=0)
 text.insert('1.0', 'INFO')
-move_button = tk.Button(window, text='move',  command= lambda: mover()) 
+move_button = tk.Button(window, text='move',  command= lambda: moveYprint()) 
 move_button.grid(row=0, column=1)
 stop_button = tk.Button(window, text='stop',  command=lambda: sends("stop"))
 stop_button.grid(row=1, column=1)
 off_button = tk.Button(window, text='OFF',  command=lambda: sends("off"))
 off_button.grid(row=2, column=1)
 on_button = tk.Button(window, text='ON',  command=lambda: sends("on"))
-on_button.grid(row=3, column=1)
 
-Slider1 = tk.Scale(window, from_=800, to=1, orient=tk.VERTICAL, length=200)
+Slider1 = tk.Scale(window, from_=600, to=0, orient=tk.VERTICAL, length=200)
 Slider1.grid(row=0, column=2)
-Slider2 = tk.Scale(window, from_=200, to=1, orient=tk.VERTICAL, length=200)
+Slider2 = tk.Scale(window, from_=200, to=0, orient=tk.VERTICAL, length=200)
 Slider2.grid(row=0, column=3)
-Slider3 = tk.Scale(window, from_=200, to=1, orient=tk.VERTICAL, length=200)
+Slider3 = tk.Scale(window, from_=200, to=0, orient=tk.VERTICAL, length=200)
 Slider3.grid(row=0, column=4)
-Slider4 = tk.Scale(window, from_=1, to=200, orient=tk.HORIZONTAL, length=200)
-Slider4.grid(row=3, column=0)
-Slider5 = tk.Scale(window, from_=1, to=50, orient=tk.HORIZONTAL, length=200)
-Slider5.grid(row=4, column=0)
-
-
 ok_button = tk.Button(
     window,  
     text='SI', 
@@ -115,33 +91,29 @@ not_button.grid(row=2, column=4)
 
 ##==========INIT============================
 datalogger("started")
+connect()
+print("connected")
+time.sleep(1)
 #schedule.every(10).seconds.do() ## ejemplos de schedule para realizar una secuencia
 #schedule.every().hour.at(":45").do(sleep)
+
 #en schedule
 #orden de movimiento
 #chek de posicion
 
 ## start Serial
-Slider4.set(100)
-Slider5.set(15)
-console.print("conexion USB: ", style="blink")
-console.print(connect(), style="reverse")
-time.sleep(1)
-
-stateAngles=initAngles()
-console.print("Rest position: " + str(stateAngles))
-time.sleep(1)
+print("startin")
+connect()
 
 ## video start 
 video_capture = cv2.VideoCapture(0)
+
 #main loop
 while True:
     ret, frame = video_capture.read()
-    circleDetection(frame, Slider4.get(), Slider5.get()) # deteccion de circulos
-
+    circleDetection(frame) # deteccion de circulos
     try:
         data=readSerial()
-        #print(data)
     except:
         data=data
 

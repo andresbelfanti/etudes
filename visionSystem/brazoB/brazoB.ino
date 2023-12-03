@@ -6,6 +6,9 @@
 #include "I2Cdev.h"
 #include "MPU6050.h"
 
+#include <Servo.h>
+
+Servo myservo;
 
 //=================================================
 Adafruit_VL53L0X lox = Adafruit_VL53L0X();
@@ -61,15 +64,18 @@ SyncDriver controller(stepperX, stepperY, stepperZ);
 
 // === variables globales ==============================
 bool motorFree = true;
-int a[5] = { 0, 0, 0, 0, 0};
-int datas[6] = { 0, 0, 0, 0, 0, 0 };
+int a[5] = { 0, 0, 0, 0, 0 };
+int datas[7] = { 0, 0, 0, 0, 0, 0, 0 };
 byte inByte;
 bool stop = false;
+int pos = 0;
 // ===0setup======================
 void setup() {
   pinMode(9, INPUT_PULLUP);
   pinMode(10, INPUT_PULLUP);
   pinMode(11, INPUT_PULLUP);
+
+  myservo.attach(12);
 
   Serial.begin(115200);
   while (!Serial) {
@@ -99,14 +105,25 @@ void setup() {
   stepperX.setSpeedProfile(stepperX.LINEAR_SPEED, MOTOR_ACCEL, MOTOR_DECEL);
   stepperY.setSpeedProfile(stepperY.LINEAR_SPEED, MOTOR_ACCEL, MOTOR_DECEL);
   stepperZ.setSpeedProfile(stepperZ.LINEAR_SPEED, MOTOR_ACCEL, MOTOR_DECEL);
+  //------------------------------------
+  for (pos = 0; pos <= 180; pos += 1) {  // goes from 0 degrees to 180 degrees
+    // in steps of 1 degree
+    myservo.write(pos);  // tell servo to go to position in variable 'pos'
+    delay(5);            // waits 15 ms for the servo to reach the position
+  }
+  for (pos = 180; pos >= 0; pos -= 1) {  // goes from 180 degrees to 0 degrees
+    myservo.write(pos);                  // tell servo to go to position in variable 'pos'
+    delay(5);                            // waits 15 ms for the servo to reach the position
+  }
 
   Serial.println("setupFinished");
   delay(1000);
 }
 void loop() {
 
-  if (millis() % 250 == 0) {  // lectura cada n milisegundos para no bloquear
+  if (millis() % 100 == 0) {  // lectura cada n milisegundos para no bloquear
     interruptors();
+    servogiro(a[3]);                  // tell servo to go to position in variable 'pos'
     Serial.print(datas[0]);
     Serial.print(",");
     Serial.print(datas[1]);
@@ -124,15 +141,18 @@ void loop() {
 
   while (Serial.available()) {
     readSerial();
-    controller.startRotate(a[0]*4, a[1]*3.75, a[2]*3.75);
-    stepperX.setSpeedProfile(stepperX.LINEAR_SPEED, a[3], a[4]);
-    stepperY.setSpeedProfile(stepperY.LINEAR_SPEED, a[3], a[4]);
-    stepperZ.setSpeedProfile(stepperZ.LINEAR_SPEED, a[3], a[4]);
-      //este es el modo non Blocking
+    delay(2);
+    stepperX.setSpeedProfile(stepperX.LINEAR_SPEED, a[4], a[5]);
+    stepperY.setSpeedProfile(stepperY.LINEAR_SPEED, a[4], a[5]);
+    stepperZ.setSpeedProfile(stepperZ.LINEAR_SPEED, a[4], a[5]);
+    delay(5);
+    controller.startRotate(int(a[0] * 4), int(a[1] * 3.75), int(a[2] * 3.75));
+    //este es el modo non Blocking
     motorFree = false;
     stop = false;
     //int a[3] = {0,0,0};
   }
+
   unsigned wait_time_micros;
 
   if (stop == false) {
@@ -150,9 +170,7 @@ void readSerial() {
   if (Serial.available()) {
     String inByte = "";
     inByte = Serial.readStringUntil('\n');  // read data until newline
-    Serial.print("data received: ");
-
-
+    Serial.println(inByte.length());
     if (inByte == "off") {  // orden de prendido y apagado desde el serial
       digitalWrite(8, HIGH);
       Serial.println("off");
@@ -165,15 +183,18 @@ void readSerial() {
       stop = true;
       Serial.println("stop");
     }
-   
     // si solo son numeros cuentan como coordenadas
     else {
-      a[0] = getValue(inByte, ',', 0).toInt();  // Angulos a la var global
-      a[1] = getValue(inByte, ',', 1).toInt();
-      a[2] = getValue(inByte, ',', 2).toInt();
-      a[3] = getValue(inByte, ',', 3).toInt();
-      a[4] = getValue(inByte, ',', 4).toInt();
-      Serial.print("coords");
+      if (inByte.length() >= 10) {
+        a[0] = getValue(inByte, ',', 0).toInt();  // Angulos a la var global
+        a[1] = getValue(inByte, ',', 1).toInt();
+        a[2] = getValue(inByte, ',', 2).toInt();
+        a[3] = getValue(inByte, ',', 3).toInt();
+        a[4] = getValue(inByte, ',', 4).toInt();
+        a[5] = getValue(inByte, ',', 5).toInt();
+
+        Serial.print("coords");
+      }
     }
   }
 }
@@ -240,8 +261,23 @@ void interruptors() {
   datas[4] = digitalRead(9);
   datas[5] = digitalRead(10);
   datas[6] = digitalRead(11);
+
   if ((datas[4] == 1) || (datas[5] == 1) || (datas[6] == 1)) {
-    stop = true;
-    Serial.println("STOP");
+    if (stop == false) {
+      Serial.println("STOP");
+      stop = true;
+    }
   }
+}
+
+void servogiro(int posObj) {
+
+  if (pos > posObj) {
+    pos=pos-1;
+  }
+
+  if (pos < posObj) {
+    pos=pos+1;
+  }
+  myservo.write(pos);
 }
